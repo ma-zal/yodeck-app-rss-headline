@@ -1,0 +1,17 @@
+{
+  "fields": ["rssUrl", "title", "pageDisplaySeconds"],
+  "schema": {
+    "rssUrl": {
+      "title": "RSS feat URL",
+      "type": "Text"
+    },
+    "title": {
+      "title": "Title",
+      "type": "Text"
+    },
+    "pageDisplaySeconds": {
+      "title": "Display each page for X seconds",
+      "type": "Number"
+    }
+  }
+}

@@ -1,0 +1,97 @@
+#app {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style your app with a dark theme */
+header {
+    background-color: #023866;
+    color: white;
+    padding: 10px 40px 10px 0;
+    text-align: right;
+    align-items: stretch;
+    gap: 1vh;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#content article {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    background-color: #222;
+    padding: 2vw;
+    width: 80vw;
+    /* box-sizing: border-box; */
+    margin: 20px auto 0;
+    border-radius: 1vw;
+
+    box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,  
+    100%, 0.075),
+    /* shadow ring 👇 */
+    0 0 0 1px hsla(0, 0%, 0%, 0.05),
+    /* multiple soft shadows 👇 */
+    0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+    0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+    0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+
+}
+
+#content article .left {
+    width: 40%;
+}
+#content article .left img {
+    width: 100%;
+    border-radius: 1vw;
+}
+
+h2 { margin-top: 0; color: #d6ba65; font-weight: normal; }
+#content article .right {
+    padding-left: 3vw;
+    width: 60%;
+
+    line-height: 1.5;
+    font-size: x-large;
+    overflow-y: hidden;
+    max-height: 70vh;
+
+}
+
+
+/* Additional styles for dark mode */
+body {
+    background-color: #1c1c1c; /* Darker background for the entire page */
+    font-family: sans-serif;
+/*    background-color: #333; /* Dark background color */
+    color: #fff; /* Light text color */
+
+}
+
+html, body, #app {
+    margin: 0; padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+#messages {
+    font-family: sans-serif;
+    position: absolute;
+    width: 100vw;
+    color: white;
+    font-size: 4vw;
+    bottom: 5%;
+    padding: 1em 10% 1em;
+    background-color: rgba(64,64,64);
+    /* box-sizing: border-box; */
+}
