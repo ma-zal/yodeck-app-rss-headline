@@ -13,6 +13,13 @@ header {
     gap: 1vh;
 }
 
+header #clock {
+    float: left;
+    margin: 0.7em 0 0 1.5em;
+    font-size: xx-large;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
 main {
     flex-grow: 1;
     display: flex;

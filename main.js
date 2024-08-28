@@ -18,6 +18,10 @@ async function init_widget(config) {
 
   window.config = config;
 
+  // Display time
+  const now = new Date;
+  document.getElementById('clock').textContent = `${now.getHours()}:${now.getMinutes() < 10 ? '0' : ''}${now.getMinutes()}`;
+
   // For avoid to free the app, stop after 3 minutes
   // setTimeout(() => {
   //   exit_widget();
