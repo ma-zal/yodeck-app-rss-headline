@@ -1,3 +1,5 @@
+'use strict';
+
 async function init_widget(config) {
   if (!config) {
     displayMessage("Missing the Yodeck app config", true);
@@ -62,13 +64,15 @@ async function init_widget(config) {
 
       document.getElementById("content").innerHTML = html;
 
-      setTimeout(exit_widget, config['pageDisplaySeconds'] * 1000);
+      setTimeout(() => exit_widget(), config['pageDisplaySeconds'] * 1000);
     })
     .catch((error) => {
       displayMessage("Error fetching or parsing RSS feed: " + error, true);
-      setTimeout(exit_widget, config['pageDisplaySeconds'] * 4000);
+      setTimeout(() => exit_widget(), config['pageDisplaySeconds'] * 4000);
     });
 }
+
+function start_widget() { /* ignore */ }
 
 function displayMessage(message, isError = false) {
   const el = document.getElementById("messages");
